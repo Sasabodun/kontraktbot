@@ -1,0 +1,26 @@
+[tool.replit]
+run = "python discord_bot.py"
+
+[tool.replit.packager]
+language = "python3"
+ignoredPackages = ["numpy", "scipy"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "discord-contract-bot"
+version = "3.0.0"
+description = "Discord бот для организации контрактов с интерактивными кнопками"
+dependencies = [
+    "discord.py>=2.3.0",
+    "python-dotenv>=1.0.0",
+    "aiohttp>=3.8.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8"
+]
